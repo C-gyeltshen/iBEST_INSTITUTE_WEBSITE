@@ -10,7 +10,7 @@ function MyComponent() {
         <div className='text-overlay'>About Us</div>
     </div>
 
-);
+); 
 }
 
 export default MyComponent;
