@@ -140,7 +140,7 @@ export default function Home() {
         </div>
         <div className="w-full h-1/6 flex justify-center">
           <div className="w-2/5 h-1/2 bg-blue rounded flex items-center justify-center">
-            <h1 className="font-medium">Create enterprises and nurture entrepreneurs.</h1>
+            <h1 className="font-medium">Create enterprises and nurture entrepreneurs . </h1>
           </div>
         </div>
         <div className="w-full h-1/6 flex justify-center">
@@ -169,7 +169,7 @@ export default function Home() {
           <div className="h-full w-3/5 ">
             <div className="w-full h-1/4 flex flex-row space-x-24">
               <div className="w-3/12 h-full bg-lightBlue rounded">
-                
+
               </div>
               <div className="w-3/12 h-full bg-lightBlue rounded"></div>
               <div className="w-3/12 h-full bg-lightBlue rounded"></div>
