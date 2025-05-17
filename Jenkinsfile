@@ -9,20 +9,16 @@ pipeline {
     stage('Install') {
       steps {
         sh 'npm install'
-        // Install jest-junit explicitly in case it's missing
-        sh 'npm install --save-dev @babel/preset-env @babel/preset-react babel-jest jest jest-environment-jsdom jest-junit identity-obj-proxy'
       }
     }
     stage('Test') {
       steps {
-        // Simplified test command - let package.json handle the reporter config
-        sh 'npm test'
+      sh 'npm test -- --ci --reporters=jest-junit'
       }
       post {
-        always {
-          // Look for report in the default location
-          junit '**/junit.xml'  
-        }
+      always {
+        junit 'junit.xml'  // Path to test report
+      }
       }
     }
     stage('Build') {
