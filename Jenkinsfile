@@ -9,27 +9,31 @@ pipeline {
     stage('Install') {
       steps {
         sh 'npm install'
+        // Install jest-junit explicitly in case it's missing
+        sh 'npm install --save-dev jest-junit'
       }
     }
     stage('Test') {
       steps {
-        sh 'npm test -- --ci --reporters=jest-junit'
+        // Simplified test command - let package.json handle the reporter config
+        sh 'npm test'
       }
       post {
         always {
-          junit 'junit.xml'  // Path to test report
+          // Look for report in the default location
+          junit '**/junit.xml'  
         }
       }
     }
     stage('Build') {
       steps {
-        sh 'npm run build'  // Useful for Next.js or React apps
+        sh 'npm run build'
       }
     }
     stage('Deploy') {
       steps {
         sh 'echo "Deploying to staging..."'
-        // Add your actual deployment steps here (e.g. SSH, Docker, etc.)
+        // Add your actual deployment steps here
       }
     }
   }
