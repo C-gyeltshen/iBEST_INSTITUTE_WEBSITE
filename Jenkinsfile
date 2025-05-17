@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh 'npm install'
         // Install jest-junit explicitly in case it's missing
-        sh 'npm install --save-dev jest-junit'
+        sh 'npm install --save-dev @babel/preset-env @babel/preset-react babel-jest jest jest-environment-jsdom jest-junit identity-obj-proxy'
       }
     }
     stage('Test') {
