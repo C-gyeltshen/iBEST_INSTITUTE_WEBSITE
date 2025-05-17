@@ -3,16 +3,16 @@ import React, { useState, useEffect } from 'react';
 import TestNavbar from "../../reusable_components/Navbar/page" 
 import dynamic from 'next/dynamic';
 import SmallNavBar from "../../reusable_components/small_navbar/page";
-import Insta from "../../images/footer/instagram.png";
-import Insta2 from "../../images/footer/instagram2.png";
-import Facebook from "../../images/footer/facebook.png";
-import Facebook2 from "../../images/footer/facebook2.png";
-import Twitter from "../../images/footer/twitter.png";
-import Twitter2 from "../../images/footer/twitter2.png";
-import Linkedin from "../../images/footer/linkedin.png";
-import Linkedin2 from "../../images/footer/linkedin2.png";
-import Location from "../../images/footer/location.png";
-import call from "../../images/footer/call.png";
+import Insta from "../../images/footer/instagram.webp";
+import Insta2 from "../../images/footer/instagram2.webp";
+import Facebook from "../../images/footer/facebook.webp";
+import Facebook2 from "../../images/footer/facebook2.webp";
+import Twitter from "../../images/footer/twitter.webp";
+import Twitter2 from "../../images/footer/twitter2.webp";
+import Linkedin from "../../images/footer/linkedin.webp";
+import Linkedin2 from "../../images/footer/linkedin2.webp";
+import Location from "../../images/footer/location.webp";
+import call from "../../images/footer/call.webp";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Footer from "../../reusable_components/footer/page"

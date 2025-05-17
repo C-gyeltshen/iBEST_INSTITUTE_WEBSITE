@@ -1,12 +1,10 @@
 "use client"
 import React from 'react';
 import NavBar from '../../reusable_components/Navbar/page'; 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Footer from "../../reusable_components/footer/page"
 import Team from "../../reusable_components/team/page"
 import Purpose from "../../reusable_components/purpose&value/page"
 import SmallNavBar from "../../reusable_components/small_navbar/page";
-
 
 function MyComponent() {
     return (
@@ -15,11 +13,11 @@ function MyComponent() {
             <div className="hidden sm:block pt-6">
                 <NavBar />
             </div>
-                <div className="w-screen h-3/5  bg-[url('./images/aboutus.jpeg')] bg-cover bg-bottom flex items-center justify-center text-white">
+                <div className="w-screen h-3/5  bg-[url('./images/aboutus.webp')] bg-cover bg-bottom flex items-center justify-center text-white">
                     <h1 className='text-4xl font-bold lg:text-5xl'>About Us</h1>
                 </div>
                 <div id='values' className="w-full h-2/5 bg-bb flex flex-row items-center justify-center">
-                    <div className="w-1/2 h-full bg-[url('./images/about.png')] hidden sm:hidden md:hidden mdx:hidden lg:block bg-cover bg-bottom"></div>
+                    <div className="w-1/2 h-full bg-[url('./images/about.webp')] hidden sm:hidden md:hidden mdx:hidden lg:block bg-cover bg-bottom"></div>
                     <div className="w-1/2 h-full bg-bb flex items-center justify-center">
                         <div className=''>
                             <h1 className='font-bold md:text-2xl lg:pt-2 mt-12 text-lg pt-10 pb-5'>Our Vision</h1>

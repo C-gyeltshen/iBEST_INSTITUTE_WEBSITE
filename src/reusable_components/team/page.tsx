@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import Sonam from "../../images/team/director.png";
-import Rinchen from "../../images/team/CEO.png";
-import Tharchen from "../../images/team/founder.png";
-import Yeethob from "../../images/team/yeethob.png";
-import Yeshey from "../../images/team/yeshey.png";
-import Cheku from "../../images/team/cheku.png";
-import Tenzin from "../../images/team/tenzin.png";
-import Kinley from "../../images/team/kinley.png";
+import Sonam from "../../images/team/director.webp";
+import Rinchen from "../../images/team/CEO.webp";
+import Tharchen from "../../images/team/founder.webp";
+import Yeethob from "../../images/team/yeethob.webp";
+import Yeshey from "../../images/team/yeshey.webp";
+import Cheku from "../../images/team/cheku.webp";
+import Tenzin from "../../images/team/tenzin.webp";
+import Kinley from "../../images/team/kinley.webp";
 
 const teamMembers = [
     { name: "Sonam Tobgay", title: "Director", img: Sonam },

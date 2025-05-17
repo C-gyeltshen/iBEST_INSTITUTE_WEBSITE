@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CountUp from 'react-countup';
-import Employee from "../../images/statistics/employee.png";
-import Services from "../../images/statistics/services_provided.png";
-import Rate from "../../images/statistics/rate.png";
+import Employee from "../../images/statistics/employee.webp";
+import Services from "../../images/statistics/services_provided.webp";
+import Rate from "../../images/statistics/rate.webp";
 
 const Statistics: React.FC = () => {
     const [startCount, setStartCount] = useState(false);

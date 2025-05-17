@@ -3,20 +3,19 @@ import React, { useState, useEffect } from 'react';
 import Footer from "../reusable_components/footer/page";
 import SmallNavBar from "../reusable_components/small_navbar/page";
 import TestNavbar from "../reusable_components/Navbar/page" 
-import Building from "../images/Website Pictures/building.jpg"
-import Logo from "../images/Website Pictures/logo.png"
-import TVET from "../images/logo/TVET.png"
-import RGOB from "../images/logo/2.png"
-import MOH from "../images/logo/3.png"
-import Business from "../images/expertise/business.png"
-import Finance from "../images/expertise/finance.png"
-import Research from "../images/expertise/research.png"
-import Animation from "../images/expertise/animation.png"
-import Writing from "../images/expertise/writing.png"
-import Marketing from "../images/expertise/marketing.png"
-import Multimedia from "../images/expertise/multimedia.png"
-import Training from "../images/expertise/training.png"
-import Development from "../images/expertise/development.png"
+import Logo from "../images/Website Pictures/logo.webp"
+import TVET from "../images/logo/TVET.webp"
+import RGOB from "../images/logo/2.webp"
+import MOH from "../images/logo/3.webp"
+import Business from "../images/expertise/business.webp"
+import Finance from "../images/expertise/finance.webp"
+import Research from "../images/expertise/research.webp"
+import Animation from "../images/expertise/animation.webp"
+import Writing from "../images/expertise/writing.webp"
+import Marketing from "../images/expertise/marketing.webp"
+import Multimedia from "../images/expertise/multimedia.webp"
+import Training from "../images/expertise/training.webp"
+import Development from "../images/expertise/development.webp"
 import Testimonials from "../reusable_components/testimonials/page"
 import SmallTestimonials from "../reusable_components/small_testimonials/page"
 import Statistics from '@/reusable_components/statistics/page';
@@ -50,7 +49,7 @@ export default function Home() {
         <div className="hidden sm:block pt-6">
             <TestNavbar />
         </div>
-        <div className="w-screen h-96 flex flex-col items-center justify-center md:h-[70vh] lg:h-[75vh] bg-[url('./images/building.jpg')] lg:bg-cover bg-cover">
+        <div className="w-screen h-96 flex flex-col items-center justify-center md:h-[70vh] lg:h-[75vh] bg-[url('./images/building.webp')] lg:bg-cover bg-cover">
         <div className="w-48 h-48 md:w-48 md:h-48 lg:w-56 lg:h-56"> {/* Increased logo size for all screen sizes */}
             <Avatar className="w-full h-full border-current m-auto">
                 <AvatarImage src={Logo.src} alt="@shadcn" />

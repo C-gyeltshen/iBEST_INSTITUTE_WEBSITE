@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 // Import images for icons
-import Home from "../../images/navbar/home.png";
-import Home2 from "../../images/navbar/home2.png";
-import Courses from "../../images/navbar/courses.png";
-import Courses2 from "../../images/navbar/courses2.png";
-import Consultancy from "../../images/navbar/consultancy.png";
-import Consultancy2 from "../../images/navbar/consultancy2.png";
-import Aboutus from "../../images/navbar/aboutus.png";
-import Aboutus2 from "../../images/navbar/aboutus2.png";
-import Contactus from "../../images/navbar/contactus.png";
-import Contactus2 from "../../images/navbar/contactus2.png";
+import Home from "../../images/navbar/home.webp";
+import Home2 from "../../images/navbar/home2.webp";
+import Courses from "../../images/navbar/courses.webp";
+import Courses2 from "../../images/navbar/courses2.webp";
+import Consultancy from "../../images/navbar/consultancy.webp";
+import Consultancy2 from "../../images/navbar/consultancy2.webp";
+import Aboutus from "../../images/navbar/aboutus.webp";
+import Aboutus2 from "../../images/navbar/aboutus2.webp";
+import Contactus from "../../images/navbar/contactus.webp";
+import Contactus2 from "../../images/navbar/contactus2.webp";
 import { usePathname } from "next/navigation";
 
 const SmallNavBar = () => {

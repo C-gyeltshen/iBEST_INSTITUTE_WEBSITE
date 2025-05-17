@@ -1,6 +1,6 @@
 "use client"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import logo from "../../images/Website Pictures/logo.jpg"
+import logo from "../../images/logo/images.webp"
 import Footer from "@/reusable_components/footer/page"
 import TestNavbar from "../../reusable_components/Navbar/page"
 import SmallNavBar from "../../reusable_components/small_navbar/page";
@@ -12,7 +12,7 @@ export default function TestPage(){
                 <TestNavbar />
             </div>
             <div className="w-screen h-screen flex mdx:items-center mdx:justify-center lg:items-center lg:justify-center flex-col">
-                <div className="w-screen h-2/5 sm:h-3/5 md:h-1/2 lg:h-1/2 bg-[url('./images/courses1.png')] bg-cover bg-center flex items-center justify-center">
+                <div className="w-screen h-2/5 sm:h-3/5 md:h-1/2 lg:h-1/2 bg-[url('./images/courses1.webp')] bg-cover bg-center flex items-center justify-center">
                     <h1 className="text-white font-extrabold text-4xl md:text-5xl mdx:text-6xl">Courses</h1>
                 </div>
                 <div className="w-screen h-3/5 lg:h-1/2 text-center space-y-5 md:space-y-10 lg:w-screen max-w-4xl ">
@@ -58,7 +58,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/iBEST_files/leaders.jpg')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/leaders.webp')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -85,7 +85,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/iBEST_files/leaders.jpg')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/leaders.webp')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -114,7 +114,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.jpeg')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.webp')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -141,7 +141,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/fin.JPG')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/fin.webp')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -170,7 +170,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.jpeg')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.webp')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -197,7 +197,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/fin.JPG')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/fin.webp')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -226,7 +226,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.jpeg')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.webp')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -253,7 +253,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/fin.JPG')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/fin.webp')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -282,7 +282,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center pb-10">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/it.JPG')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/it.webp')] bg-center bg-cover rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">

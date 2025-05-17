@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState, useRef } from "react";
-import Logo from "../../images/Website Pictures/logo.jpg";
+import Logo from "../../images/logo/images.webp";
 import Link from "next/link";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import Headroom from "react-headroom";

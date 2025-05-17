@@ -1,11 +1,11 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import CarouselBG from "../../images/testimonials/carousel_bg.png";
-import CarouselBG2 from "../../images/testimonials/carouselbg2.png";
-import CarouselBG3 from "../../images/testimonials/carouselbg3.png";
-import Image1 from "../../images/testimonials/DR.KP.png";
-import Image2 from "../../images/testimonials/DP.png";
-import Image3 from "../../images/testimonials/PT.png";
+import CarouselBG from "../../images/testimonials/carousel_bg.webp";
+import CarouselBG2 from "../../images/testimonials/carouselbg2.webp";
+import CarouselBG3 from "../../images/testimonials/carouselbg3.webp";
+import Image1 from "../../images/testimonials/DR.KP.webp";
+import Image2 from "../../images/testimonials/DP.webp";
+import Image3 from "../../images/testimonials/PT.webp";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 const SmallTestimonials: React.FC = () => {
