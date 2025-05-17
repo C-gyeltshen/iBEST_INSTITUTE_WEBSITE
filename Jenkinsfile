@@ -13,7 +13,12 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'npm test'  // Make sure "test" script exists in package.json
+        sh 'npm test -- --ci --reporters=jest-junit'
+      }
+      post {
+        always {
+          junit 'junit.xml'  // Path to test report
+        }
       }
     }
     stage('Build') {
