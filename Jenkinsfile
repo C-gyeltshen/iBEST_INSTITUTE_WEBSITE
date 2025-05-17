@@ -1,8 +1,10 @@
-{
+pipeline {
   agent any
+
   tools {
-    nodejs 'NodeJS-20.x'  // Matches the Global Tool Configuration name
+    nodejs 'NodeJS-20.x'  // Matches the name in Global Tool Configuration
   }
+
   stages {
     stage('Install') {
       steps {
@@ -11,18 +13,18 @@
     }
     stage('Test') {
       steps {
-        sh 'npm test'  // Assumes `test` script exists in package.json
+        sh 'npm test'  // Make sure "test" script exists in package.json
       }
     }
     stage('Build') {
       steps {
-        sh 'npm run build'  // For React/Next.js apps
+        sh 'npm run build'  // Useful for Next.js or React apps
       }
     }
     stage('Deploy') {
       steps {
         sh 'echo "Deploying to staging..."'
-        // Add deployment commands (e.g., SSH, AWS S3, Docker)
+        // Add your actual deployment steps here (e.g. SSH, Docker, etc.)
       }
     }
   }
