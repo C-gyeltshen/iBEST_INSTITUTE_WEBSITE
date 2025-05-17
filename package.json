@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "jest --ci --reporters=default --reporters=jest-junit",
+    "test": "jest --ci --reporters=default --reporters=jest-junit --outputFile=./junit.xml",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -55,6 +55,7 @@
     "@types/react-dom": "^18",
     "@types/react-google-recaptcha": "^2.1.9",
     "@types/react-headroom": "^3.2.3",
+    "jest-junit": "^16.0.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.14",
     "typescript": "^5"
