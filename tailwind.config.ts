@@ -117,7 +117,7 @@ const config: Config = {
 				testamonial1: "url('./images/drKarma.jpg')",
 				image1: "url('./images/dasho1.png')",
 				passu: "url('./images/passu.jpg')",
-				Aboutus: "url('./images/aboutus.png')",
+				Aboutus: "url('./images/aboutus.jpeg')",
 				traning: "url('./images/traning.jpg')",
 				about: "url('./images/about.png')",
 				one: "url('./images/one.jpg')",

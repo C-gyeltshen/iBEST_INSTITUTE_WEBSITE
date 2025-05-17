@@ -114,7 +114,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.jpg')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.jpeg')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -170,7 +170,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.jpg')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.jpeg')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">
@@ -226,7 +226,7 @@ export default function TestPage(){
                 <div className="w-screen h-1/2 lg:h-screen lg:w-1/2 flex items-center justify-center relative">
                 <div className="w-11/12 h-5/6 bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-6 lg:p-8 flex flex-row lg:flex-col items-center justify-center drop-shadow-lg hover:drop-shadow-2xl border border-slate-300 hover:border-indigo-300 transition-all duration-300 ease-in-out">
                     <div className="w-2/6 hidden h-full lg:h-2/5 lg:w-full md:flex flex-col space-y-3 items-center justify-center">
-                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.jpg')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
+                        <div className="w-11/12 h-2/6 lg:h-3/5 bg-[url('./images/man.jpeg')] bg-cover bg-bottom rounded-xl transition-transform transform hover:scale-105 duration-300"></div>
                             <div className="w-11/12 h-1/2 lg:h-1/5 flex flex-col lg:flex-row lg:space-x-4 items-center justify-center space-y-4 lg:justify-start">
                                 <div className="w-10 h-20 bg-red-200 md:w-24 md:h-24 lg:w-16 lg:h-16 rounded-full border-2 border-indigo-600 shadow-md overflow-hidden">
                                     <Avatar className="h-full w-full">

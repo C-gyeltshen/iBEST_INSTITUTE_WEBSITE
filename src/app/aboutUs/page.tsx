@@ -7,11 +7,7 @@ import Team from "../../reusable_components/team/page"
 import Purpose from "../../reusable_components/purpose&value/page"
 import SmallNavBar from "../../reusable_components/small_navbar/page";
 
-import {
-    ResizableHandle,
-    ResizablePanel,
-    ResizablePanelGroup,
-} from "@/components/ui/resizable"
+
 function MyComponent() {
     return (
         <div>
@@ -19,7 +15,7 @@ function MyComponent() {
             <div className="hidden sm:block pt-6">
                 <NavBar />
             </div>
-                <div className="w-screen h-3/5  bg-[url('./images/aboutus.png')] bg-cover bg-bottom flex items-center justify-center text-white">
+                <div className="w-screen h-3/5  bg-[url('./images/aboutus.jpeg')] bg-cover bg-bottom flex items-center justify-center text-white">
                     <h1 className='text-4xl font-bold lg:text-5xl'>About Us</h1>
                 </div>
                 <div id='values' className="w-full h-2/5 bg-bb flex flex-row items-center justify-center">
