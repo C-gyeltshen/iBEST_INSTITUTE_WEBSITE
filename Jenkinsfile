@@ -2,13 +2,12 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS'  // Must match Jenkins Global Tool Configuration
+        nodejs 'NodeJS'
     }
 
     environment {
-        DOCKER_IMAGE = 'gyelltshen23/ibest-institute'  // Your Docker Hub repository
-        DOCKER_TAG = 'latest'                          // Tag for the image
-        DOCKER_CREDS = credentials('GITHUB_CREDENTIALS') // Your Docker Hub credentials
+        DOCKER_IMAGE = 'gyelltshen23/ibest-institute'
+        DOCKER_TAG = 'latest'
     }
 
     stages {
@@ -27,20 +26,29 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    // Use full Docker path to avoid "command not found"
-                    sh '/usr/local/bin/docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .'
+                    // Reset Docker config to avoid credential helper issues
+                    sh 'echo \'{"auths":{}}\' > ~/.docker/config.json'
+                    
+                    // Build with explicit platform for macOS/Linux compatibility
+                    sh '''
+                        /usr/local/bin/docker build \
+                            --platform linux/amd64 \
+                            -t ${DOCKER_IMAGE}:${DOCKER_TAG} .
+                    '''
                 }
             }
         }
 
         stage('Push to Docker Hub') {
             steps {
-                script {
-                    // Login using credentials
+                withCredentials([usernamePassword(
+                    credentialsId: 'GITHUB_CREDENTIALS',
+                    usernameVariable: 'DOCKER_USER',
+                    passwordVariable: 'DOCKER_PASS'
+                )]) {
                     sh '''
-                        echo $DOCKER_CREDS_PSW | /usr/local/bin/docker login -u $DOCKER_CREDS_USR --password-stdin
+                        /usr/local/bin/docker login -u $DOCKER_USER -p $DOCKER_PASS
                         /usr/local/bin/docker push ${DOCKER_IMAGE}:${DOCKER_TAG}
-                        /usr/local/bin/docker logout
                     '''
                 }
             }
