@@ -2,10 +2,7 @@ pipeline {
   agent any
 
   tools {
-    nodejs 'NodeJS' // Ensure this name matches Jenkins Global Tool Configuration
-  }
-
-  environment {
+    nodejs 'NodeJS' 
     IMAGE_NAME = 'gyeltshen23/A1' 
     DOCKER_CREDS = credentials('GITHUB_CREDENTIALS')      
   }
