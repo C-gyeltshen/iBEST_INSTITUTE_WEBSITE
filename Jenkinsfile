@@ -2,35 +2,65 @@ pipeline {
   agent any
 
   tools {
-    nodejs 'NodeJS'  // Matches the name in Global Tool Configuration
+    nodejs 'NodeJS' // Ensure this name matches Jenkins Global Tool Configuration
+  }
+
+  environment {
+    IMAGE_NAME = 'gyeltshen23/A1' 
+    DOCKER_CREDS = credentials('GITHUB_CREDENTIALS')      
   }
 
   stages {
-    stage('Install') {
+    stage('Checkout') {
       steps {
-        sh 'npm install'
+        checkout scm
       }
     }
-    stage('Test') {
+
+    stage('Install Dependencies') {
       steps {
-      sh 'npm test -- --ci --reporters=jest-junit'
-      }
-      post {
-      always {
-        junit 'junit.xml'  // Path to test report
-      }
+        sh 'npm ci' // Better for CI builds than `npm install`
       }
     }
-    stage('Build') {
+
+    stage('Build App') {
       steps {
         sh 'npm run build'
       }
     }
-    stage('Deploy') {
+
+    stage('Build Docker Image') {
       steps {
-        sh 'echo "Deploying to staging..."'
-        // Add your actual deployment steps here
+        script {
+          def tag = "${IMAGE_NAME}:${env.BUILD_NUMBER}"
+          sh "docker build -t $tag ."
+        }
       }
+    }
+
+    stage('Push to Docker Hub') {
+      steps {
+        script {
+          def tag = "${IMAGE_NAME}:${env.BUILD_NUMBER}"
+          sh """
+            echo $DOCKER_CREDS_PSW | docker login -u $DOCKER_CREDS_USR --password-stdin
+            docker push $tag
+          """
+        }
+      }
+    }
+  }
+
+  post {
+    always {
+      sh 'docker logout'
+      cleanWs()
+    }
+    success {
+      echo "✅ Docker image pushed successfully."
+    }
+    failure {
+      echo "❌ Pipeline failed. Check the logs above."
     }
   }
 }
