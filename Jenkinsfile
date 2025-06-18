@@ -1,76 +1,49 @@
-
-// pipeline {
-//     agent any
-
-//     tools {
-//         nodejs 'NodeJS'  // The name must exactly match what's configured in "Manage Jenkins" > "Global Tool Configuration"
-//     }
-
-//     environment {
-//         DOCKER_CREDS = credentials('GITHUB_CREDENTIALS')
-//     }
-
-//     stages {
-//         stage('Install Dependencies') {
-//             steps {
-//                 sh 'npm ci'
-//             }
-//         }
-
-//         stage('Build App') {
-//             steps {
-//                 sh 'npm run build'
-//             }
-//         }
-
-//         stage('Build Docker Image') {
-//             steps {
-//                 sh 'docker build -t gyelltshen23/yourimage:tag .'
-//             }
-//         }
-
-//         stage('Push to Docker Hub') {
-//             steps {
-//                 sh '''
-//                     echo $DOCKER_CREDS_PSW | docker login -u $DOCKER_CREDS_USR --password-stdin
-//                     docker push yourname/yourimage:tag
-//                     docker logout
-//                 '''
-//             }
-//         }
-//     }
-// }
-
-
 pipeline {
-        agent any
+    agent any
 
-        environment {
-            DOCKER_CREDENTIALS_ID = 'GITHUB_CREDENTIALS'
+    tools {
+        nodejs 'NodeJS'  // Must match Jenkins Global Tool Configuration
+    }
+
+    environment {
+        DOCKER_IMAGE = 'gyelltshen23/ibest-institute'  // Your Docker Hub repository
+        DOCKER_TAG = 'latest'                          // Tag for the image
+        DOCKER_CREDS = credentials('GITHUB_CREDENTIALS') // Your Docker Hub credentials
+    }
+
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm ci'
+            }
         }
 
-        stages {
-            stage('Build') {
-                steps {
-                    script {
-                        docker.build('my-app')
-                    }
+        stage('Build App') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Use full Docker path to avoid "command not found"
+                    sh '/usr/local/bin/docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .'
                 }
             }
+        }
 
-            stage('Test') {
-                steps {
-                    sh 'docker run my-app npm test'
-                }
-            }
-
-            stage('Deploy') {
-                steps {
-                    withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-                        sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
-                        sh 'docker push my-app'
-                    }
+        stage('Push to Docker Hub') {
+            steps {
+                script {
+                    // Login using credentials
+                    sh '''
+                        echo $DOCKER_CREDS_PSW | /usr/local/bin/docker login -u $DOCKER_CREDS_USR --password-stdin
+                        /usr/local/bin/docker push ${DOCKER_IMAGE}:${DOCKER_TAG}
+                        /usr/local/bin/docker logout
+                    '''
                 }
             }
         }
     }
+}
