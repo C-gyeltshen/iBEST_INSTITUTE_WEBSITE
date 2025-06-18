@@ -3,8 +3,8 @@ FROM node:18
 WORKDIR /app
 COPY package*.json ./
 
-# Create a non-root user
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+# # Create a non-root user
+# RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 
 # Install dependencies before switching user (some packages may need root)
 RUN npm install
