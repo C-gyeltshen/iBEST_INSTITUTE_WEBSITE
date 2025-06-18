@@ -1,21 +1,18 @@
-FROM node:18
+FROM node:18-alpine
 
 WORKDIR /app
+
 COPY package*.json ./
-
-# # Create a non-root user
-# RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-
-# Install dependencies before switching user (some packages may need root)
 RUN npm install
 
+# Alpine uses different user commands
+RUN addgroup -S appgroup && \
+    adduser -S -G appgroup appuser && \
+    chown -R appuser:appgroup /app
+
 COPY . .
-
-# Switch to non-root user AFTER setup
-USER appuser
-
 RUN npm run build
 
+USER appuser
 EXPOSE 3000
 CMD ["npm", "run", "start"]
-
