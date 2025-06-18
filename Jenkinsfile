@@ -1,63 +1,42 @@
+
 pipeline {
-  agent any
+    agent any
 
-  tools {
-    nodejs 'NodeJS' 
-    IMAGE_NAME = 'gyeltshen23/A1' 
-    DOCKER_CREDS = credentials('GITHUB_CREDENTIALS')      
-  }
-
-  stages {
-    stage('Checkout') {
-      steps {
-        checkout scm
-      }
+    tools {
+        nodejs 'NodeJS'  // The name must exactly match what's configured in "Manage Jenkins" > "Global Tool Configuration"
     }
 
-    stage('Install Dependencies') {
-      steps {
-        sh 'npm ci' // Better for CI builds than `npm install`
-      }
+    environment {
+        DOCKER_CREDS = credentials('GITHUB_CREDENTIALS')
     }
 
-    stage('Build App') {
-      steps {
-        sh 'npm run build'
-      }
-    }
-
-    stage('Build Docker Image') {
-      steps {
-        script {
-          def tag = "${IMAGE_NAME}:${env.BUILD_NUMBER}"
-          sh "docker build -t $tag ."
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm ci'
+            }
         }
-      }
-    }
 
-    stage('Push to Docker Hub') {
-      steps {
-        script {
-          def tag = "${IMAGE_NAME}:${env.BUILD_NUMBER}"
-          sh """
-            echo $DOCKER_CREDS_PSW | docker login -u $DOCKER_CREDS_USR --password-stdin
-            docker push $tag
-          """
+        stage('Build App') {
+            steps {
+                sh 'npm run build'
+            }
         }
-      }
-    }
-  }
 
-  post {
-    always {
-      sh 'docker logout'
-      cleanWs()
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t gyelltshen23/yourimage:tag .'
+            }
+        }
+
+        stage('Push to Docker Hub') {
+            steps {
+                sh '''
+                    echo $DOCKER_CREDS_PSW | docker login -u $DOCKER_CREDS_USR --password-stdin
+                    docker push yourname/yourimage:tag
+                    docker logout
+                '''
+            }
+        }
     }
-    success {
-      echo "✅ Docker image pushed successfully."
-    }
-    failure {
-      echo "❌ Pipeline failed. Check the logs above."
-    }
-  }
 }
